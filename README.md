@@ -32,6 +32,8 @@ Run this in your terminal anytime your env vars change:
 rake addons:heroku:push
 ```
 
+<a href="http://addons-npm-test.herokuapp.com/" target="_blank">Sample app on heroku</a>
+
 ## Use your addons:
 
 Coming soon.
