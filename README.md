@@ -24,12 +24,7 @@ ADDONS_APP_ID='app_97308f3f-948a-4f90-879a-ea3155e5f6d7' ADDONS_APP_TOKEN='pyw5W
 
 ## Heroku install
 
-Additionally, do these things to push your app to Heroku. NOTE: You have to restart your node server as described above (creates addons.json) before running these steps.
-
-Run this in your terminal once:
-``` shell
-heroku plugins:install git://github.com/ddollar/heroku-config.git
-```
+Additionally, do this step to push your app settings to Heroku. NOTE: You have to restart your node server as described above (creates addons.json) before running these steps.
 
 Run this in your terminal anytime your env vars change:
 ``` shell
