@@ -24,10 +24,7 @@ ADDONS_APP_ID='app_97308f3f-948a-4f90-879a-ea3155e5f6d7' ADDONS_APP_TOKEN='pyw5W
 
 ## Heroku install
 
-Additionally, do this step to push your app settings to Heroku.<br />
-NOTE: You have to restart your node server as described above (creates addons.json) before running this.
-
-Run this in your terminal anytime your env vars change:
+Run this in your terminal when your Launchpack.io settings change (anytime addons.json is updated):
 ``` shell
 rake addons:heroku:push
 ```
