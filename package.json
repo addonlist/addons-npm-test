@@ -1,0 +1,31 @@
+{
+  "name": "addons-npm-test",
+  "version": "0.0.0",
+  "description": "Test Node.js app for Addons NPM",
+  "main": "server.js",
+  "dependencies": {
+    "addons": "~0.0.3",
+    "express": "~3.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/addonlist/addons-npm-test.git"
+  },
+  "keywords": [
+    "addons",
+    "npm",
+    "node.js",
+    "launchpack.io"
+  ],
+  "author": "Ben Pellow",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/addonlist/addons-npm-test/issues"
+  },
+  "homepage": "https://github.com/addonlist/addons-npm-test"
+}
