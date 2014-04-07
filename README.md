@@ -61,4 +61,10 @@ Run this in your terminal:
 node server.js
 ```
 
+For Heroku, add/modify these two files:
+``` javascript
+package.json
+Procfile
+```
+
 Visit localhost:3000
