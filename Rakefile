@@ -26,7 +26,7 @@ namespace :addons do
               puts "adding environment variable #{key}"
 
               # add new vars to application.yml for the restart
-              file.puts "#{key}: #{value}"
+              file.puts "#{key}=#{value}"
             end
           end
         end
