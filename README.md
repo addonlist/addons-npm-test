@@ -22,6 +22,20 @@ Set environment variables and restart your server:
 ADDONS_APP_ID='app_97308f3f-948a-4f90-879a-ea3155e5f6d7' ADDONS_APP_TOKEN='pyw5WBzdfFBh5ta5K63g' node server.js
 ```
 
+## Heroku install
+
+Additionally, do these things to push your app to Heroku
+
+Run this in your terminal once:
+``` shell
+heroku plugins:install git://github.com/ddollar/heroku-config.git
+```
+
+Run this in your terminal anytime your env vars change:
+``` shell
+rake addons:heroku:push
+```
+
 ## Use your addons:
 
 Coming soon.
