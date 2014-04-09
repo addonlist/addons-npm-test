@@ -33,7 +33,43 @@ rake addons:heroku:push
 
 ## Use your addons:
 
-Coming soon.
+### Mailgun integration:
+
+Make it easy on ourselves and install request:
+```shell
+npm install request
+```
+
+Send an email with a post request (or consult Mailgun docs for other ways).
+Run this in a node shell or in your app's javascript:
+```javascript
+request = require('request');
+
+var email = {
+  to: "info@addonlist.com",
+  from: "nodetestapp@addonlist.com",
+  subject: "this is a sample from the npm test app",
+  text: "this is a sample email body. we'll use mailgun to send this."
+};
+
+var sendSimpleEmail = function(email) {
+  var url = "https://api:"+ process.env.MAILGUN_API_KEY + "@api.mailgun.net/v2/app7d41aa77b66a469180084fdaba10ecd8.mailgun.org/messages";
+
+  request.post(
+    url,
+    { form: email },
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        console.log(body);
+      } else {
+        console.log(error);
+      }
+    }
+  );
+};
+
+sendSimpleEmail(email);
+```
 
 
 
