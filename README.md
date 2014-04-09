@@ -40,7 +40,7 @@ Make it easy on ourselves and install request:
 npm install request
 ```
 
-Send an email with a post request (or consult Mailgun docs for other ways).
+Send an email with a post request (or consult Mailgun docs SMTP info).
 Run this in a node shell or in your app's javascript:
 ```javascript
 request = require('request');
