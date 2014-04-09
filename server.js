@@ -70,10 +70,20 @@ var saveEmailInMongo = function(email) {
   var server = new Server('ds047387.mongolab.com', 47387, {auto_reconnect : true});
   var db = new Db('AddonList_app_97308f3f-948a-4f90-879a-ea3155e5f6d7', server);
 
+  // open the db
   db.open(function(err, client) {
+      // auth
       client.authenticate('AddonList_app_97308f3f-948a-4f90-879a-ea3155e5f6d7', 'a9v96g3k0nh2o8j2sptsj9ijn2', function(err, success) {
-          // Do Something ...
-        console.log(db);
+        var emails = db.collection('emails');
+        // insert an email
+        emails.insert(email, {safe: true}, function(error, response) {
+          if (!error && response.statusCode == 200) {
+            // celebrate!
+            console.log(response.body);
+          } else {
+            console.log(error);
+          }
+        });
       });
   });
 };
