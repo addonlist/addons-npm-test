@@ -1,11 +1,14 @@
 var express = require('express');
 var request = require('request');
-var app = express();
-
-app.use(express.bodyParser());
-
 var addons = require('addons');
 addons();
+
+var app = express();
+app.use(express.bodyParser());
+
+var mongo = require('mongodb');
+var Server = mongo.Server;
+var Db = mongo.Db;
 
 app.get('/', function(req, res){
   var emailForm = "<body> \
@@ -60,9 +63,24 @@ var sendSimpleEmail = function(email) {
       }
     }
   );
-}
+};
+
+var saveEmailInMongo = function(email) {
+
+  var server = new Server('ds047387.mongolab.com', 47387, {auto_reconnect : true});
+  var db = new Db('AddonList_app_97308f3f-948a-4f90-879a-ea3155e5f6d7', server);
+
+  db.open(function(err, client) {
+      client.authenticate('AddonList_app_97308f3f-948a-4f90-879a-ea3155e5f6d7', 'a9v96g3k0nh2o8j2sptsj9ijn2', function(err, success) {
+          // Do Something ...
+        console.log(db);
+      });
+  });
+};
 
 app.post('/emails', function(req, res){
+
+  saveEmailInMongo(req.body.email);
 
   sendSimpleEmail(req.body.email);
 
