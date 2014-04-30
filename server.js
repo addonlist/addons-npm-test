@@ -41,9 +41,8 @@ app.get('/', function(req, res){
   vars += "ENVIRONMENT VARS:<br />";
   vars += "<br />MAILGUN_API_KEY: " + process.env.MAILGUN_API_KEY;
   vars += "<br />MONGOLAB_URI: " + process.env.MONGOLAB_URI;
-  vars += "<br />LAUNCHBOX_APP_ID: " + process.env.LAUNCHBOX_APP_ID;
-  vars += "<br />ADDONS_APP_ID: " + process.env.ADDONS_APP_ID;
-  vars += "<br />ADDONS_APP_TOKEN: " + process.env.ADDONS_APP_TOKEN;
+  vars += "<br />ADDONS_API_ID: " + process.env.ADDONS_API_ID;
+  vars += "<br />ADDONS_AUTH_TOKEN: " + process.env.ADDONS_AUTH_TOKEN;
   vars += "</footer>";
 
   res.send(vars);
