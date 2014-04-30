@@ -19,7 +19,7 @@ addons();
 
 Set environment variables and restart your server:
 ``` javascript
-ADDONS_APP_ID='app_97308f3f-948a-4f90-879a-ea3155e5f6d7' ADDONS_APP_TOKEN='pyw5WBzdfFBh5ta5K63g' node server.js
+ADDONS_API_ID='app_74c6e4f2-c8dd-41e1-b133-876c4ce6c6f7' ADDONS_AUTH_TOKEN='V2Naw103kivzMXj_Afw7cw' node server.js
 ```
 
 ## Heroku install
