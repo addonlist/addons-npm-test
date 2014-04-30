@@ -49,7 +49,7 @@ app.get('/', function(req, res){
 });
 
 var sendSimpleEmail = function(email) {
-  var url = "https://api:"+ process.env.MAILGUN_API_KEY + "@api.mailgun.net/v2/app7d41aa77b66a469180084fdaba10ecd8.mailgun.org/messages";
+  var url = "https://api:"+ process.env.MAILGUN_API_KEY +  "@api.mailgun.net/v2/" + process.env.MAILGUN_SMTP_LOGIN.match(/@(.*)$/)[1] + "/messages";
 
   request.post(
     url,
