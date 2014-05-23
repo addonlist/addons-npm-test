@@ -4,7 +4,7 @@
   "description": "Test Node.js app for Addons NPM",
   "main": "server.js",
   "dependencies": {
-    "addons": "~0.1.0",
+    "addons": "~0.1.1",
     "express": "~3.5.1",
     "request": "~2.34.0",
     "mongodb": "~1.4.0"
@@ -22,7 +22,7 @@
     "addons",
     "npm",
     "node.js",
-    "addonlist",
+    "addons.io",
     "launchpack"
   ],
   "author": "Ben Pellow",

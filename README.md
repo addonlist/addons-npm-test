@@ -19,7 +19,7 @@ addons();
 
 Set environment variables and restart your server:
 ``` javascript
-ADDONS_API_ID='app_74c6e4f2-c8dd-41e1-b133-876c4ce6c6f7' ADDONS_AUTH_TOKEN='V2Naw103kivzMXj_Afw7cw' node server.js
+ADDONS_API_ID='YOUR_ADDONS_API_ID_HERE' ADDONS_AUTH_TOKEN='YOUR_ADDONS_AUTH_TOKEN_HERE' node server.js
 ```
 
 ## Heroku install
@@ -46,14 +46,14 @@ Run this in a node shell or in your app's javascript:
 request = require('request');
 
 var email = {
-  to: "info@addonlist.com",
-  from: "nodetestapp@addonlist.com",
+  to: "info@addons.io",
+  from: "info@addons.io",
   subject: "this is a sample from the npm test app",
   text: "this is a sample email body. we'll use mailgun to send this."
 };
 
 var sendSimpleEmail = function(email) {
-  var url = "https://api:"+ process.env.MAILGUN_API_KEY + "@api.mailgun.net/v2/app7d41aa77b66a469180084fdaba10ecd8.mailgun.org/messages";
+  var url = "https://api:"+ process.env.MAILGUN_API_KEY +  "@api.mailgun.net/v2/" + process.env.MAILGUN_SMTP_LOGIN.match(/@(.*)$/)[1] + "/messages";
 
   request.post(
     url,
